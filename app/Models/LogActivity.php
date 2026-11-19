@@ -12,7 +12,7 @@ class LogActivity extends Model
 
     use HasFactory, SoftDeletes;
 
-    protected $table = 'log_activity'; // sesuai dengan tabel di SQL Server
+    protected $table = 'log_activity'; // sesuai dengan tabel di database PostgreSQL
     protected $primaryKey = 'Id_Activity'; // primary key sesuai tabel kamu
     public $timestamps = true; // karena ada created_at & updated_at
 

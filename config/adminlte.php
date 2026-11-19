@@ -325,11 +325,6 @@ return [
         ],
         ['header' => 'Feature'],
         [
-            'text' => 'Main',
-            'url' => 'admin/Mainpage',
-            'icon' => 'fas fa-home'
-        ],
-        [
             'text' => 'Report',
             'url' => 'admin/Log',
             'icon' => 'fas fa-file-alt',

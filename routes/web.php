@@ -21,12 +21,14 @@ Route::get('/', function () {
 // Auth routes
 Auth::routes();
 
-// Dashboard & Home
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// Dashboard & Home dipindah ke dalam grup auth di bawah
 
 // ✅ Middleware: semua yang butuh login
 Route::middleware(['auth'])->group(function () {
+    // Dashboard & Home
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
     Route::get('/admin/Mainpage', function () {
         return view('mainpage');
     })->name('mainpage');
